@@ -204,7 +204,7 @@ footer{
     footer{
         display: block;
     }
-    .remove{
+    .remove,#remove{
         display: block;
     }
     #show{
