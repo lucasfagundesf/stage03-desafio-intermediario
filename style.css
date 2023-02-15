@@ -21,6 +21,7 @@
     --fs-p:2.0rem
 }
 body{
+    padding-top: 3rem;
     background: #E5E5E5;
     width: 38.4rem;
     margin: 0 auto;
