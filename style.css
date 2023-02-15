@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin&family=Staatliches&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cor-main: #EFF1FF;
+    --cor-id: #FEEAFA;
+    --cor-h1: #CBC0D3;
+    --cor-header: #8E9AAF;
+    --cor-fcolor: #4A4E69;
+    --cor-florem: #23053A;
+
+    --ff-heading: 'Staatliches', cursive;
+    --ff-p: 'Palanquin', sans-serif;
+
+    /* 10px */
+    font-size: 62.5%;
+    --fs-p:2.0rem
+}
+body{
+    background: #E5E5E5;
+    width: 38.4rem;
+    margin: 0 auto;
+}
+header{
+    position: relative;
+    background-color: var(--cor-header);
+    text-align: center;
+    height: 279px;
+    margin-bottom: 1.4rem ;
+    border-radius: 20px 20px 0 0;
+}
+header img{
+    margin: 3.2rem ;
+}
+header h1{
+    position: absolute;
+    width: 100%;
+    bottom: 2.5rem;
+    background-color: var(--cor-h1);
+    font-family: var(--ff-heading);
+    color: #ffffff;
+
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 4rem;
+    line-height: 3.4rem;
+
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+    padding: 8px ;
+
+  
+
+}
+main{
+    background-color: var(--cor-main);
+    border-radius: 20px;
+}
+.page{
+    max-width: 32rem;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 4.0rem;
+}
+.page p{
+    font-family: var(--ff-p);
+    font-size: 2.0rem;
+    line-height: 2rem;
+    margin-bottom: 4.9rem;
+}
+.card{
+    position: relative;
+    margin-bottom: 3.2rem;
+
+    animation: toup 1s;
+}
+.card p{
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+
+    font-family: var(--ff-heading);
+    background-color: var(--cor-id);
+
+    font-size: var(--fs-p);
+    padding: 0 1.6rem;
+    
+    height: 3.5rem;
+    letter-spacing: 0.05rem;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+
+    border-radius: 20px;
+
+    animation: todown 1s;
+}
+@keyframes toup{
+    0%{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes todown{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
