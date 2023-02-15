@@ -150,7 +150,7 @@ footer{
         max-width: 37.7rem;
         background-color: var(--cor-header);
     }
-    #remove{
+    #remove  {
         font-family: 'Roboto', sans-serif;
         color: #ffffff;
         font-size: 1.3rem;
@@ -209,5 +209,6 @@ footer{
     }
     #show{
         display: none;
+        
     }
 }
