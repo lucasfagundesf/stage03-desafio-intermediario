@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Palanquin&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -58,14 +59,20 @@ header h1{
 main{
     background-color: var(--cor-main);
     border-radius: 20px;
+    display: grid;
 }
 .page{
     max-width: 32rem;
     margin: 0 auto;
     text-align: center;
+
     padding-bottom: 4.0rem;
 }
-.page p{
+
+p{
+    max-width: 32rem;
+    text-align: center;
+    margin: 2rem;
     font-family: var(--ff-p);
     font-size: 2.0rem;
     line-height: 2rem;
@@ -74,13 +81,13 @@ main{
 .card{
     position: relative;
     margin-bottom: 3.2rem;
-
     animation: toup 1s;
+    
 }
 .card p{
     position: absolute;
-    top: 1.6rem;
-    right: 1.6rem;
+    top: 0;
+    right: 0;
 
     font-family: var(--ff-heading);
     background-color: var(--cor-id);
@@ -98,6 +105,17 @@ main{
 
     animation: todown 1s;
 }
+footer{
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    display: none;
+}
+.remove{
+    display: none;
+    
+}
+
 @keyframes toup{
     0%{
         opacity: 0;
@@ -116,5 +134,79 @@ main{
     100%{
         opacity: 1;
         transform: translateY(0px);
+    }
+}
+@media(min-width:1280px){
+    main{
+        
+        grid-template-areas: "A B";
+    }
+    body{
+        padding-top: 3rem;
+        min-width: 128rem;
+    }
+    .left{
+        max-width: 37.7rem;
+        background-color: var(--cor-header);
+    }
+    #remove{
+        font-family: 'Roboto', sans-serif;
+        color: #ffffff;
+        font-size: 1.3rem;
+        line-height: 2rem;
+        text-align: center;
+    }
+    .page{
+   
+        max-width: 90.3rem;
+    }
+    .rigth{
+        padding-top: 6.4rem;
+        margin: 0 auto;
+        display: grid;
+        column-gap: 3.2rem; 
+        grid-template-areas: 
+        "A B C "
+        "D B F"
+        "D E F"
+        ;
+    }
+    .rigth div:nth-child(1){
+        grid-area: A;
+    }
+    .rigth div:nth-child(2){
+        grid-area: B;
+    }
+    .rigth div:nth-child(3){ 
+        grid-area: C;
+    }
+    .rigth div:nth-child(4){
+        grid-area: D;
+    }
+    .rigth div:nth-child(5){
+        grid-area: E;
+    }
+    .rigth div:nth-child(6){
+        grid-area: F; 
+    }
+    .card{
+       height: fit-content;
+    }
+    .card p{
+        top: -1rem;
+        right: -1rem;
+    }
+    .card img{
+        max-width: 22rem; 
+        
+    }
+    footer{
+        display: block;
+    }
+    .remove{
+        display: block;
+    }
+    #show{
+        display: none;
     }
 }
