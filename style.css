@@ -112,7 +112,7 @@ footer{
     line-height: 2.8rem;
     display: none;
 }
-.remove{
+.remove,#remove{
     display: none;
     
 }
